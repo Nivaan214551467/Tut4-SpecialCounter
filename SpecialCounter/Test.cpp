@@ -9,6 +9,7 @@ int main()
 	int ans;
 	
 	do{
+		//  A Menu so different functions can be selected 
 		cout << endl << "===================================================" << endl;
 		cout << "1 - Change Begin Value" << endl;
 		cout << "2 - Change End Value" << endl;
@@ -27,14 +28,14 @@ int main()
 		else if (ans == 3)
 		{
 			int tmp;
-			cout << "Enter increment value : ";
-			cin >> tmp;
+			cout << "Enter increment value : ";		//prompts user to enter Increment value
+			cin >> tmp;			
 			counter1.stepInc(tmp);
 		}
 		else if (ans == 4)
 		{
 			int tmp;
-			cout << "Enter decrement value : ";
+			cout << "Enter decrement value : ";		//prompts user to enter Decrement value
 			cin >> tmp;
 			counter1.stepDec(tmp);
 		}
@@ -42,6 +43,8 @@ int main()
 			counter1.up();
 		else if (ans == 6)
 			counter1.down();
+		else if (ans == 0)
+			cout << "Counter will now exit.";
 		else
 			cout << "Invalid input";
 

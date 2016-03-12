@@ -28,66 +28,39 @@ SpecialCounter::~SpecialCounter()
 void SpecialCounter::start()
 {
 	cout << "Enter number to Begin : ";
-	cin >> begin;
-	currValue = begin;
+	cin >> begin;				//stores value from user into begin variable
+	currValue = begin;			//sets the Current Value of the counter to the Start value
 }
 
 void SpecialCounter::stop()
 {
 	cout << "Enter number to Stop : ";
-	cin >> end;
+	cin >> end;					//stores value from user into end variable
 }
 
-void SpecialCounter::stepInc(int stepSize)
+void SpecialCounter::stepInc(int stepSize)	//changes the Increment of the counter
 {
 	inc = stepSize;
 }
 
-void SpecialCounter::stepDec(int stepSize)
+void SpecialCounter::stepDec(int stepSize)	//changes the Decrement of the counter
 {
 	dec = stepSize;
 }
 
-void SpecialCounter::down()
+void SpecialCounter::down()					//counts the counter down by one Decrement
 {
 	currValue = currValue - dec;
-	cout << currValue;
+	cout << endl << "The current value is : " << currValue <<endl;		//prints the current value
 }
 
-void SpecialCounter::up()
+void SpecialCounter::up()					//counts the counter Up by one Increment
 {
-	currValue = currValue + inc;
-	if (currValue > end){
-		cout << "Counter has stopped." << endl;
+	if ((currValue + inc) > end){			//ensures that if the counter has reached the stopping value, it will not count up
+		cout << "Counter has reached end value." << endl;
 	}
 	else{
-		cout << currValue;
+		currValue = currValue + inc;
+		cout << endl << "The current value is : " << currValue << endl;	//prints the current value
 	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void SpecialCounter::printCountUp()
-{
-	for (currValue = begin; currValue <= end;)
-	{
-		cout << currValue << endl;
-		up();
-	}
-
 }
