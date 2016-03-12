@@ -40,9 +40,9 @@ int main()
 			counter1.stepDec(tmp);
 		}
 		else if (ans == 5)
-			counter1.up();
+			counter1++;
 		else if (ans == 6)
-			counter1.down();
+			counter1--;
 		else if (ans == 0)
 			cout << "Counter will now exit.";
 		else

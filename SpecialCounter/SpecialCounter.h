@@ -17,8 +17,8 @@ public:
 	void stop();			//changes the Stopping value of the counter
 	void stepInc(int);		//changes the Increment value of the counter
 	void stepDec(int);		//changes the Decrement value of the counter
-	void up();				//counts the counter Up by one Increment
-	void down();			//counts the counter Down by one Decrement
+	void operator++();				//counts the counter Up by one Increment
+	void operator--();			//counts the counter Down by one Decrement
 
 	~SpecialCounter();
 };

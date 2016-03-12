@@ -48,13 +48,13 @@ void SpecialCounter::stepDec(int stepSize)	//changes the Decrement of the counte
 	dec = stepSize;
 }
 
-void SpecialCounter::down()					//counts the counter down by one Decrement
+void SpecialCounter::operator--()					//counts the counter down by one Decrement
 {
 	currValue = currValue - dec;
 	cout << endl << "The current value is : " << currValue <<endl;		//prints the current value
 }
 
-void SpecialCounter::up()					//counts the counter Up by one Increment
+void SpecialCounter::operator++()					//counts the counter Up by one Increment
 {
 	if ((currValue + inc) > end){			//ensures that if the counter has reached the stopping value, it will not count up
 		cout << "Counter has reached end value." << endl;
